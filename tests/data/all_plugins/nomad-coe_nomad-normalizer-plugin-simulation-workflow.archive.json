@@ -1,0 +1,6 @@
+{
+    "data": {
+        "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
+        "repository": "https://github.com/nomad-coe/nomad-normalizer-plugin-simulation-workflow"
+    }
+}

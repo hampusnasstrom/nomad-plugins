@@ -1,0 +1,7 @@
+{
+    "data": {
+        "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
+        "repository": "https://github.com/FAIRmat-NFDI/cookiecutter-nomad-plugin",
+        "toml_directory": "{{cookiecutter.plugin_name}}"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "data": {
+        "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
+        "repository": "https://github.com/FAIRmat-NFDI/nomad-parser-orca"
+    }
+}

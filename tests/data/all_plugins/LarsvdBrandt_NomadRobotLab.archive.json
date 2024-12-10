@@ -1,0 +1,7 @@
+{
+    "data": {
+        "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
+        "repository": "https://github.com/LarsvdBrandt/NomadRobotLab",
+        "toml_directory": "nomad-develop/nomad-source/examples/data/cow_tutorial/nomad-countries"
+    }
+}

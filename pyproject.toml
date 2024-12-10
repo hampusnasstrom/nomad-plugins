@@ -115,7 +115,7 @@ where = ["src"]
 
 schema_package_entry_point = "nomad_plugins.schema_packages:schema_package_entry_point"
 
-app_entry_point = "nomad_plugins.apps:app_entry_point"
+plugin_app_entry_point = "nomad_plugins.apps:plugin_app_entry_point"
 
 [tool.cruft]
 # Avoid updating workflow files, this leads to permissions issues

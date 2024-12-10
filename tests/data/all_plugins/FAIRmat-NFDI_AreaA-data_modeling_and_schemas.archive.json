@@ -1,0 +1,7 @@
+{
+    "data": {
+        "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
+        "repository": "https://github.com/FAIRmat-NFDI/AreaA-data_modeling_and_schemas",
+        "toml_directory": "transmission/transmission_plugin/uv_vis_nir_transmission_plugin"
+    }
+}
