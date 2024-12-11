@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/nomad-coe/nomad-normalizer-plugin-system"
+        "repository": "https://github.com/nomad-coe/nomad-normalizer-plugin-system",
+        "created": "2023-12-29T07:36:59"
     }
 }

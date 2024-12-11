@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/nomad-coe/atomistic-parsers"
+        "repository": "https://github.com/nomad-coe/atomistic-parsers",
+        "created": "2022-11-08T15:11:37"
     }
 }

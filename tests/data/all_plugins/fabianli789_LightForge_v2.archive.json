@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/fabianli789/LightForge_v2"
+        "repository": "https://github.com/fabianli789/LightForge_v2",
+        "created": "2024-09-19T16:43:30"
     }
 }

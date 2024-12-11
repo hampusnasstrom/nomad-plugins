@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/nomad-coe/nomad-normalizer-plugin-bandstructure"
+        "repository": "https://github.com/nomad-coe/nomad-normalizer-plugin-bandstructure",
+        "created": "2023-12-23T00:14:08"
     }
 }

@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/hampusnasstrom/nomad-plugins"
+        "repository": "https://github.com/hampusnasstrom/nomad-plugins",
+        "created": "2024-12-06T09:56:35"
     }
 }

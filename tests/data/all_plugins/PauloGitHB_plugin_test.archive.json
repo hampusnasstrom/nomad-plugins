@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/PauloGitHB/plugin_test"
+        "repository": "https://github.com/PauloGitHB/plugin_test",
+        "created": "2024-09-27T07:37:08"
     }
 }

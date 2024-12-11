@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/FAIRmat-NFDI/nomad-parser-wannier90"
+        "repository": "https://github.com/FAIRmat-NFDI/nomad-parser-wannier90",
+        "created": "2024-07-04T06:43:59"
     }
 }

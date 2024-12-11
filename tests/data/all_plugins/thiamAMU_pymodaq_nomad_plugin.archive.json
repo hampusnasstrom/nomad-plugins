@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/thiamAMU/pymodaq_nomad_plugin"
+        "repository": "https://github.com/thiamAMU/pymodaq_nomad_plugin",
+        "created": "2024-05-31T09:35:40"
     }
 }

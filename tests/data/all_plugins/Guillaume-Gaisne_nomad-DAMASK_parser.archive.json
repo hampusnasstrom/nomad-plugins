@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/Guillaume-Gaisne/nomad-DAMASK_parser"
+        "repository": "https://github.com/Guillaume-Gaisne/nomad-DAMASK_parser",
+        "created": "2024-06-04T07:59:05"
     }
 }

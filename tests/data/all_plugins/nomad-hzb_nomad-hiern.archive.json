@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/nomad-hzb/nomad-hiern"
+        "repository": "https://github.com/nomad-hzb/nomad-hiern",
+        "created": "2024-07-29T18:50:45"
     }
 }

@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/FAIRmat-NFDI/nomad-parser-edmft"
+        "repository": "https://github.com/FAIRmat-NFDI/nomad-parser-edmft",
+        "created": "2024-09-06T07:28:35"
     }
 }

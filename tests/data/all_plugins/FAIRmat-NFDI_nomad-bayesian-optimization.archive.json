@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/FAIRmat-NFDI/nomad-bayesian-optimization"
+        "repository": "https://github.com/FAIRmat-NFDI/nomad-bayesian-optimization",
+        "created": "2024-06-20T11:40:25"
     }
 }

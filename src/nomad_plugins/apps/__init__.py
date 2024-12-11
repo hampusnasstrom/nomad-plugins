@@ -3,8 +3,8 @@ from nomad.config.models.ui import (
     App,
     Column,
     Columns,
-    Filters,
     Menu,
+    MenuItemHistogram,
     MenuItemTerms,
     MenuSizeEnum,
     SearchQuantities,
@@ -27,15 +27,27 @@ plugin_app_entry_point = AppEntryPoint(
         columns=Columns(
             selected=[
                 f'data.name#{schema}',
+                f'data.owner#{schema}',
                 f'data.repository#{schema}',
+                f'data.on_central#{schema}',
+                f'data.on_example_oasis#{schema}',
                 f'data.on_pypi#{schema}',
             ],
             options={
                 f'data.name#{schema}': Column(
                     label='Name',
                 ),
+                f'data.owner#{schema}': Column(
+                    label='Owner',
+                ),
                 f'data.repository#{schema}': Column(
                     label='Repository',
+                ),
+                f'data.on_central#{schema}': Column(
+                    label='On central NOMAD',
+                ),
+                f'data.on_example_oasis#{schema}': Column(
+                    label='On NOMAD example oasis',
                 ),
                 f'data.on_pypi#{schema}': Column(
                     label='On PyPI',
@@ -50,7 +62,39 @@ plugin_app_entry_point = AppEntryPoint(
                     search_quantity=f'data.authors.name#{schema}',
                     title='Author',
                     show_input=True,
+                    options=8,
                 ),
+                MenuItemTerms(
+                    search_quantity=f'data.plugin_dependencies.name#{schema}',
+                    title='Depends on',
+                    show_input=True,
+                    options=8,
+                ),
+                MenuItemHistogram(
+                    x=f'data.created#{schema}',
+                    title='Plugin creation date',
+                ),
+                MenuItemTerms(
+                    search_quantity=f'data.on_central#{schema}',
+                    title='On central NOMAD',
+                    show_input=False,
+                    options=2,
+                    n_columns=2,
+                ),
+                MenuItemTerms(
+                    search_quantity=f'data.on_example_oasis#{schema}',
+                    title='On NOMAD example oasis',
+                    show_input=False,
+                    options=2,
+                    n_columns=2,
+                ),
+                MenuItemTerms(
+                    search_quantity=f'data.on_pypi#{schema}',
+                    title='On PyPI',
+                    show_input=False,
+                    options=2,
+                    n_columns=2,
+                )
             ],
         ),
         filters_locked={

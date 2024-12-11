@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/nomad-coe/workflow-parsers"
+        "repository": "https://github.com/nomad-coe/workflow-parsers",
+        "created": "2022-10-04T17:43:06"
     }
 }

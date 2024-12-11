@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/FAIRmat-NFDI/nomad-parser-h5md"
+        "repository": "https://github.com/FAIRmat-NFDI/nomad-parser-h5md",
+        "created": "2024-09-11T09:43:16"
     }
 }

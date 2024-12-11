@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/lokik/sprkkr2nomad"
+        "repository": "https://github.com/lokik/sprkkr2nomad",
+        "created": "2024-09-07T21:03:01"
     }
 }

@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/mxwalbert/ait-echt-oasis-sputtering"
+        "repository": "https://github.com/mxwalbert/ait-echt-oasis-sputtering",
+        "created": "2024-08-22T15:51:55"
     }
 }

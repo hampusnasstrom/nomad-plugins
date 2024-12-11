@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/MPI-CPfS-Dresden/nomad-labfolder-plugin"
+        "repository": "https://github.com/MPI-CPfS-Dresden/nomad-labfolder-plugin",
+        "created": "2024-10-18T08:04:17"
     }
 }

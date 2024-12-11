@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/FAIRmat-NFDI/nomad-parser-w2dynamics"
+        "repository": "https://github.com/FAIRmat-NFDI/nomad-parser-w2dynamics",
+        "created": "2024-08-27T11:35:09"
     }
 }

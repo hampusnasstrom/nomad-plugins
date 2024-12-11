@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/FAIRmat-NFDI/pynxtools-mpes"
+        "repository": "https://github.com/FAIRmat-NFDI/pynxtools-mpes",
+        "created": "2024-02-20T11:07:12"
     }
 }

@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/fabianschoeppach/nomad-UIBK-plugin"
+        "repository": "https://github.com/fabianschoeppach/nomad-UIBK-plugin",
+        "created": "2024-05-16T09:58:04"
     }
 }

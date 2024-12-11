@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/rettigl/pynxtools-igor"
+        "repository": "https://github.com/rettigl/pynxtools-igor",
+        "created": "2024-11-29T23:29:20"
     }
 }

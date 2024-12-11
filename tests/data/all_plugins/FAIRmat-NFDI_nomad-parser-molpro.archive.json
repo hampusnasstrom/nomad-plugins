@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/FAIRmat-NFDI/nomad-parser-molpro"
+        "repository": "https://github.com/FAIRmat-NFDI/nomad-parser-molpro",
+        "created": "2024-10-10T13:01:26"
     }
 }

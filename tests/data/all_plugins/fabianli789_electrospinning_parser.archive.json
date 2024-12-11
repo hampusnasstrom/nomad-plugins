@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/fabianli789/electrospinning_parser"
+        "repository": "https://github.com/fabianli789/electrospinning_parser",
+        "created": "2024-12-03T14:32:05"
     }
 }

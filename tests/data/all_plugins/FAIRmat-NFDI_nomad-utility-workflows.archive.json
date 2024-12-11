@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/FAIRmat-NFDI/nomad-utility-workflows"
+        "repository": "https://github.com/FAIRmat-NFDI/nomad-utility-workflows",
+        "created": "2024-10-14T07:41:11"
     }
 }

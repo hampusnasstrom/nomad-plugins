@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/JosePizarro3/nomad-parser-dmft"
+        "repository": "https://github.com/JosePizarro3/nomad-parser-dmft",
+        "created": "2024-09-11T19:28:42"
     }
 }

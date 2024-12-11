@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/Guillaume-Gaisne/nomad-SXDM_parser"
+        "repository": "https://github.com/Guillaume-Gaisne/nomad-SXDM_parser",
+        "created": "2024-07-15T09:29:40"
     }
 }

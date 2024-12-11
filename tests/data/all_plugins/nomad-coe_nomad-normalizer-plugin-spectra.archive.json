@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/nomad-coe/nomad-normalizer-plugin-spectra"
+        "repository": "https://github.com/nomad-coe/nomad-normalizer-plugin-spectra",
+        "created": "2024-01-15T14:15:06"
     }
 }

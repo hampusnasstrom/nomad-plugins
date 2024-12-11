@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/IKZ-Berlin/laytec_epitt_nomad_plugin"
+        "repository": "https://github.com/IKZ-Berlin/laytec_epitt_nomad_plugin",
+        "created": "2024-01-16T15:56:01"
     }
 }

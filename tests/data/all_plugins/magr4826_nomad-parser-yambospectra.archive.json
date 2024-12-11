@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/magr4826/nomad-parser-yambospectra"
+        "repository": "https://github.com/magr4826/nomad-parser-yambospectra",
+        "created": "2024-09-05T08:19:51"
     }
 }

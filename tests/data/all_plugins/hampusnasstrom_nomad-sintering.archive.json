@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/hampusnasstrom/nomad-sintering"
+        "repository": "https://github.com/hampusnasstrom/nomad-sintering",
+        "created": "2024-05-15T12:41:26"
     }
 }

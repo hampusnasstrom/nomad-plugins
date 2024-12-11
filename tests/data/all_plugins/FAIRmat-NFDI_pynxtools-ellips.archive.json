@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/FAIRmat-NFDI/pynxtools-ellips"
+        "repository": "https://github.com/FAIRmat-NFDI/pynxtools-ellips",
+        "created": "2024-05-03T08:40:35"
     }
 }

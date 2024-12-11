@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/PauloGitHB/PyMoDAQ"
+        "repository": "https://github.com/PauloGitHB/PyMoDAQ",
+        "created": "2024-10-24T14:14:36"
     }
 }

@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/nomad-coe/electronic-parsers"
+        "repository": "https://github.com/nomad-coe/electronic-parsers",
+        "created": "2022-10-04T17:44:00"
     }
 }

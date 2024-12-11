@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/budschi/tutorial13handson"
+        "repository": "https://github.com/budschi/tutorial13handson",
+        "created": "2024-05-15T12:41:14"
     }
 }

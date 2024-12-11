@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/nomad-hzb/nomad-hysprint"
+        "repository": "https://github.com/nomad-hzb/nomad-hysprint",
+        "created": "2024-06-15T17:37:11"
     }
 }

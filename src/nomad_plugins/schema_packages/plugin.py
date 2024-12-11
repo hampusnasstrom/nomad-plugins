@@ -12,7 +12,10 @@ if TYPE_CHECKING:
         BoundLogger,
     )
 
+    from nomad_plugins.schema_packages import PluginSchemaPackageEntryPoint
+
 import base64
+import datetime
 import re
 
 import requests
@@ -20,9 +23,9 @@ import toml
 from nomad.config import config
 from nomad.datamodel.data import ArchiveSection, Author, Schema
 from nomad.datamodel.metainfo.annotations import ELNAnnotation, ELNComponentEnum
-from nomad.metainfo import Quantity, SchemaPackage, SubSection
+from nomad.metainfo import Datetime, Quantity, SchemaPackage, SubSection
 
-configuration = config.get_plugin_entry_point(
+configuration: 'PluginSchemaPackageEntryPoint' = config.get_plugin_entry_point(
     'nomad_plugins.schema_packages:schema_package_entry_point'
 )
 
@@ -50,20 +53,53 @@ def get_toml(url: str, subdirectory: str=None, logger: 'BoundLogger'=None) -> di
         'https://github.com',
         'https://api.github.com/repos',
     )
-    response = requests.get(f'{repo_api_url}/contents/{subdir}pyproject.toml')
+    headers = {}
+    if configuration.github_api_token:
+        headers={
+            'Authorization': f'token {configuration.github_api_token}'
+        }
+    response = requests.get(
+        f'{repo_api_url}/contents/{subdir}pyproject.toml',
+        headers=headers,
+    )
     if response.ok:
         content = response.json().get('content')
         if content:
             toml_content = base64.b64decode(content).decode('utf-8')
             return toml.loads(toml_content)
-    elif response.forbidden:
+    elif response.status_code == requests.codes.forbidden:
         msg = 'Too many requests to GitHub API. Please try again later.'
         if logger:
             logger.warn(msg)
         else:
             print(msg)
-    return {}
+    else:
+        msg = (
+            f'Failed to get pyproject.toml from {url}: '
+            f'{response.json().get("message", "No message")}'
+        )
+        if logger:
+            logger.warn(msg)
+        else:
+            print(msg)
+    return None
 
+
+def on_gitlab_oasis(
+        plugin_name: str,
+        oasis_toml: str,
+        logger: 'BoundLogger'=None) -> bool:
+    response = requests.get(oasis_toml)
+    if not response.ok:
+        msg = f'Failed to get pyproject.toml from {oasis_toml}: {response.text}'
+        if logger:
+            logger.warn(msg)
+        else:
+            print(msg)
+    pyproject_data = toml.loads(response.text)
+    name_pattern = re.compile(r'^[^;>=<\s]+')
+    plugin_dependencies = pyproject_data['project']['optional-dependencies']['plugins']
+    return plugin_name in [name_pattern.match(d).group() for d in plugin_dependencies]
 
 
 class PyprojectAuthor(ArchiveSection):
@@ -76,9 +112,6 @@ class PyprojectAuthor(ArchiveSection):
 
 
 class Plugin(Schema):
-    name = Quantity(
-        type=str,
-    )
     repository = Quantity(
         type=str,
         a_eln=ELNAnnotation(component=ELNComponentEnum.URLEditQuantity),
@@ -87,7 +120,17 @@ class Plugin(Schema):
         type=str,
         a_eln=ELNAnnotation(component=ELNComponentEnum.StringEditQuantity),
     )
+    created = Quantity(
+        type=Datetime,
+        a_eln=ELNAnnotation(component=ELNComponentEnum.DateTimeEditQuantity),
+    )
+    name = Quantity(
+        type=str,
+    )
     description = Quantity(
+        type=str,
+    )
+    owner = Quantity(
         type=str,
     )
     on_pypi = Quantity(
@@ -96,11 +139,9 @@ class Plugin(Schema):
     )
     on_central = Quantity(
         type=bool,
-        default=False,
     )
     on_example_oasis = Quantity(
         type=bool,
-        default=False,
     )
     authors = SubSection(
         section=PyprojectAuthor,
@@ -156,9 +197,22 @@ class Plugin(Schema):
 
     def normalize(self, archive: 'EntryArchive', logger: 'BoundLogger') -> None:
         super().normalize(archive, logger)
-        if self.repository is None or not self.repository.startswith('https://github.com'):
+        if not archive.results:
+            archive.results = Results()
+        if not archive.results.eln:
+            archive.results.eln = ELN()
+        archive.results.eln.lab_ids = [self.repository]
+        if self.created is None:
+            self.created = datetime.datetime.now()
+        if self.repository is None:
             return
+        match = re.match(r'https://github.com/([^/]+)/([^/]+)', self.repository)
+        if not match:
+            logger.warn(f'Invalid repository URL: {self.repository}')
+        self.owner = match.group(1)
         pyproject_dict = get_toml(self.repository, self.toml_directory, logger)
+        if pyproject_dict is None:
+            return
         project = pyproject_dict.get('project', {})
         authors = []
         maintainers = []
@@ -171,16 +225,21 @@ class Plugin(Schema):
         self.authors = authors
         self.maintainers = maintainers
         self.find_dependencies(project, archive, logger)
-        if not archive.results:
-            archive.results = Results()
-        if not archive.results.eln:
-            archive.results.eln = ELN()
-        archive.results.eln.lab_ids = [self.repository]
         if self.name:
             response = requests.get(f'https://pypi.org/pypi/{self.name}/json')
             if response.ok:
                 self.on_pypi = True
                 archive.results.eln.lab_ids.append(f'https://pypi.org/project/{self.name}/')
+        if self.on_central is None:
+            self.on_central = on_gitlab_oasis(
+                self.name,
+                'https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-distro/-/raw/main/pyproject.toml'
+            )
+        if self.on_example_oasis is None:
+            self.on_example_oasis = on_gitlab_oasis(
+                self.name,
+                'https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-distro/-/raw/test-oasis/pyproject.toml'
+            )
 
 
 class PluginReference(ArchiveSection):

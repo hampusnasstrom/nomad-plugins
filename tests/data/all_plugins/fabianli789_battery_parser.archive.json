@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/fabianli789/battery_parser"
+        "repository": "https://github.com/fabianli789/battery_parser",
+        "created": "2024-11-24T14:15:41"
     }
 }

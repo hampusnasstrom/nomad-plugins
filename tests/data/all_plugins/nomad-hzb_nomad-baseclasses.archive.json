@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/nomad-hzb/nomad-baseclasses"
+        "repository": "https://github.com/nomad-hzb/nomad-baseclasses",
+        "created": "2024-06-15T14:35:08"
     }
 }

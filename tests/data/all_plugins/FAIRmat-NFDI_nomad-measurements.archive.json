@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/FAIRmat-NFDI/nomad-measurements"
+        "repository": "https://github.com/FAIRmat-NFDI/nomad-measurements",
+        "created": "2023-09-06T11:26:05"
     }
 }

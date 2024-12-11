@@ -1,6 +1,7 @@
 {
     "data": {
         "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/nomad-coe/nomad-schema-plugin-run"
+        "repository": "https://github.com/nomad-coe/nomad-schema-plugin-run",
+        "created": "2023-12-05T15:15:09"
     }
 }
