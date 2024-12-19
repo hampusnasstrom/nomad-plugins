@@ -1,7 +1,0 @@
-{
-    "data": {
-        "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/budschi/testnomadapp",
-        "created": "2024-05-16T14:02:38"
-    }
-}

@@ -1,7 +1,0 @@
-{
-    "data": {
-        "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/ZBT-Tools/nomad-plugin-parser-example",
-        "created": "2024-11-23T21:43:44"
-    }
-}

@@ -1,7 +1,0 @@
-{
-    "data": {
-        "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/lauri-codes/nomad-summary",
-        "created": "2024-07-22T09:10:31"
-    }
-}

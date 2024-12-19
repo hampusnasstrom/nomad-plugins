@@ -1,8 +1,0 @@
-{
-    "data": {
-        "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/blueraft/example-distro",
-        "created": "2024-09-11T14:36:11",
-        "toml_directory": "examples/data/cow_tutorial/nomad-countries"
-    }
-}

@@ -29,6 +29,8 @@ dependencies = [
     "nomad-lab>=1.3.0",
     "python-magic-bin; sys_platform == 'win32'",
     "toml",
+    "click",
+    "requests",
 ]
 
 [project.urls]
@@ -36,6 +38,9 @@ Repository = "https://github.com/hampusnasstrom/nomad-plugins"
 
 [project.optional-dependencies]
 dev = ["ruff", "pytest", "structlog"]
+
+[project.scripts]
+plugin-crawler = "nomad_plugins.plugin_crawler:main"
 
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.
