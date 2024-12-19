@@ -1,7 +1,0 @@
-{
-    "data": {
-        "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/Henroc/nomad-plugin-test",
-        "created": "2024-11-27T18:31:46"
-    }
-}

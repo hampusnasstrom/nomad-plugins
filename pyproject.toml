@@ -15,7 +15,7 @@ classifiers = [
 ]
 name = "nomad-plugins"
 description = "A plugin for discovering other plugins."
-version = "0.1.0"
+dynamic = ["version"]
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [
@@ -29,6 +29,8 @@ dependencies = [
     "nomad-lab>=1.3.0",
     "python-magic-bin; sys_platform == 'win32'",
     "toml",
+    "click",
+    "requests",
 ]
 
 [project.urls]
@@ -36,6 +38,9 @@ Repository = "https://github.com/hampusnasstrom/nomad-plugins"
 
 [project.optional-dependencies]
 dev = ["ruff", "pytest", "structlog"]
+
+[project.scripts]
+plugin-crawler = "nomad_plugins.plugin_crawler:main"
 
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.
@@ -110,6 +115,8 @@ package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools_scm]
 
 [project.entry-points.'nomad.plugin']
 

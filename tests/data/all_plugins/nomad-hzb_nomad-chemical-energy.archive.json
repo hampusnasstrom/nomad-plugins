@@ -1,7 +1,0 @@
-{
-    "data": {
-        "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/nomad-hzb/nomad-chemical-energy",
-        "created": "2024-06-15T14:06:18"
-    }
-}

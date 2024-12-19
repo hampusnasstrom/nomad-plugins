@@ -1,7 +1,0 @@
-{
-    "data": {
-        "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/IKZ-Berlin/ikz-trpl",
-        "created": "2024-10-10T19:03:47"
-    }
-}

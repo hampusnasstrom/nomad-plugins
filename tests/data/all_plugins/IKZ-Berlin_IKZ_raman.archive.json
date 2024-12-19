@@ -1,7 +1,0 @@
-{
-    "data": {
-        "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/IKZ-Berlin/IKZ_raman",
-        "created": "2024-06-13T08:18:12"
-    }
-}

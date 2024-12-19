@@ -32,6 +32,7 @@ plugin_app_entry_point = AppEntryPoint(
                 f'data.on_central#{schema}',
                 f'data.on_example_oasis#{schema}',
                 f'data.on_pypi#{schema}',
+                f'data.stars#{schema}',
             ],
             options={
                 f'data.name#{schema}': Column(
@@ -52,6 +53,15 @@ plugin_app_entry_point = AppEntryPoint(
                 f'data.on_pypi#{schema}': Column(
                     label='On PyPI',
                 ),
+                f'data.stars#{schema}': Column(
+                    label='Stars',
+                ),
+                f'data.created#{schema}': Column(
+                    label='Created on',
+                ),
+                f'data.last_updated#{schema}': Column(
+                    label='Last modified',
+                ),
             },
         ),
         menu=Menu(
@@ -70,9 +80,21 @@ plugin_app_entry_point = AppEntryPoint(
                     show_input=True,
                     options=8,
                 ),
+                MenuItemTerms(
+                    search_quantity=f'data.plugin_entry_points.type#{schema}',
+                    title='Plugin entry points',
+                    show_input=False,
+                    options=5,
+                ),
                 MenuItemHistogram(
                     x=f'data.created#{schema}',
                     title='Plugin creation date',
+                    show_input=False,
+                ),
+                MenuItemHistogram(
+                    x=f'data.last_updated#{schema}',
+                    title='Last modification date',
+                    show_input=False,
                 ),
                 MenuItemTerms(
                     search_quantity=f'data.on_central#{schema}',
@@ -94,7 +116,7 @@ plugin_app_entry_point = AppEntryPoint(
                     show_input=False,
                     options=2,
                     n_columns=2,
-                )
+                ),
             ],
         ),
         filters_locked={

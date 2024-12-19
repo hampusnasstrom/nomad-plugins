@@ -1,7 +1,0 @@
-{
-    "data": {
-        "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/PauloGitHB/Oscilloscope_plugin",
-        "created": "2024-11-12T13:44:40"
-    }
-}

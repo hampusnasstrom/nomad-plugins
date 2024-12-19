@@ -1,7 +1,0 @@
-{
-    "data": {
-        "m_def": "nomad_plugins.schema_packages.plugin.Plugin",
-        "repository": "https://github.com/lauri-codes/nomad-example",
-        "created": "2024-04-26T11:24:03"
-    }
-}
