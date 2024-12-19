@@ -15,7 +15,7 @@ classifiers = [
 ]
 name = "nomad-plugins"
 description = "A plugin for discovering other plugins."
-version = "0.1.0"
+dynamic = ["version"]
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [
@@ -115,6 +115,8 @@ package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools_scm]
 
 [project.entry-points.'nomad.plugin']
 
